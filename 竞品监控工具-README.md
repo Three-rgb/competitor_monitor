@@ -92,7 +92,10 @@ config/监控清单.xlsx + settings.json（运营可自助维护，零代码改�
 competitor_monitor/
 ├── config/
 │   ├── settings.json         # MySQL连接/采集参数/钉钉webhook/功能开关（不入库Git）
+│   ├── settings.example.json # 配置模板，复制为 settings.json 后填值
 │   └── 监控清单.xlsx          # SKU基准价、监控关键词、破价/降价阈值、启停状态
+├── sql/
+│   └── init.sql              # 建库建表脚本（4 张表，可重复执行）
 ├── data/
 │   ├── raw/{日期}/           # 采集原始JSON，永久留痕，清洗环节的输入
 │   └── output/               # 日报Excel
@@ -155,3 +158,9 @@ competitor_monitor/
 
 - **二期**：日报 Excel、run_log 收尾闭环、淘宝子流程、登录态/风控熔断、启动配置校验、排除词表外置、sku_baseline 解耦
 - **三期**：价格趋势图、影刀计划任务每日调度、多平台横向比价
+
+## License
+
+[MIT](LICENSE) © 2026 Three-rgb
+
+MIT 授权针对本仓库的**代码本身**，不构成对第三方平台的访问许可。使用本工具访问电商平台，仍受该平台服务条款约束 —— 详见上文「风险与合规声明」。
