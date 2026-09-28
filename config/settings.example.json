@@ -1,0 +1,39 @@
+{
+  "mysql": {
+    "host": "127.0.0.1",
+    "port": 3306,
+    "user": "rpa_monitor",
+    "password": "你的数据库密码",
+    "database": "competitor_monitor",
+    "charset": "utf8mb4",
+    "connect_timeout": 10
+  },
+  "paths": {
+    "monitor_list": "config/监控清单.xlsx",
+    "raw_dir": "data/raw",
+    "output_dir": "data/output",
+    "log_dir": "logs",
+    "checkpoint_dir": "checkpoint",
+    "screenshot_dir": "logs/screenshots"
+  },
+  "crawl": {
+    "page_limit": 2,
+    "explicit_wait_sec": 10,
+    "retry_times": 2,
+    "retry_backoff_sec": [5, 15],
+    "task_interval_min_sec": 5,
+    "task_interval_max_sec": 15,
+    "headless": false
+  },
+  "alert": {
+    "dingtalk_webhook": "https://oapi.dingtalk.com/robot/send?access_token=你的token",
+    "dingtalk_secret": "你的加签密钥",
+    "p0_at_mobiles": ["负责人手机号"],
+    "push_enabled": true
+  },
+  "run": {
+    "resume_enabled": true,
+    "screenshot_on_error": true,
+    "log_level": "INFO"
+  }
+}

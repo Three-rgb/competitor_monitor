@@ -1,0 +1,24 @@
+# ===== 敏感配置（含数据库密码、钉钉webhook密钥，绝不上传）=====
+config/settings.json
+
+# ===== 运行产物（每次运行自动重新生成）=====
+data/
+logs/
+checkpoint/
+
+# ===== 本地业务数据 =====
+# 当前清单为虚构演示数据，直接随仓库上传。
+# 若未来填入真实SKU与定价，取消下行注释：
+# config/监控清单.xlsx
+
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+
+# ===== IDE / 系统 =====
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini
+.DS_Store
