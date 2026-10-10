@@ -78,8 +78,8 @@ config/监控清单.xlsx + settings.json（运营可自助维护，零代码改�
 | 钉钉群推送（影刀原生指令，加签模式，TOP3 汇总格式） | ✅ 已实现 |
 | 推送幂等（notified 回写，重跑不重复打扰） | ✅ 已实现 |
 | 失败任务单点跳过不炸全局（Try-Catch + 失败落盘留痕） | ✅ 已实现 |
-| 日报 Excel 生成 | 🚧 进行中 |
-| 运行收尾（run_log 回填 end_time/成功率/状态） | 🚧 进行中 |
+| 日报 Excel 生成 | ✅ 已实现 |
+| 运行收尾（run_log 回填 end_time/成功率/状态） | ✅ 已实现 |
 | 淘宝平台采集子流程 | 📋 二期规划 |
 | 登录态/风控页自动检测与熔断 | 📋 二期规划 |
 | 启动时配置校验（Excel 格式检查报告） | 📋 二期规划 |
@@ -124,7 +124,7 @@ competitor_monitor/
 
 1. 环境：影刀 RPA、MySQL 8.x、影刀 Python 环境安装 `pymysql`、`openpyxl`
 2. 建库建表：执行 `sql/init.sql`（utf8mb4）
-3. 复制 `config/settings.example.json` 为 `settings.json`，填入 MySQL 与钉钉机器人配置（**settings.json 已加入 .gitignore，绝不上传**）
+3. 复制 `config/settings.example.json` 为 `settings.json`，填入 MySQL 与钉钉机器人配置
 4. 按表头格式维护 `config/监控清单.xlsx`（可改内容，勿动列结构）
 5. 影刀打开应用，运行主流程
 
